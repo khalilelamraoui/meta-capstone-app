@@ -1,38 +1,454 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,500;0,700;0,800;1,400;1,500;1,700;1,800&display=swap');
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root{
+  --primary: #495E57;
+  --secondary: #F4CE14;
+  --accent: #EE9972;
+  --light: #E5E5E5;
+  --dark: #333333;
+}
+#root{
+  width: 70%;
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a{
+  text-decoration: none;
+  color: var(--dark);
+  font-size: 21px;
+  font-family: 'Markazi Text', serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+a:hover{
+  cursor: pointer;
+}
+button:hover{
+  cursor: pointer;
+  box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.35);
+  transition: box-shadow 0.3s ease-in-out;
+}
+li{
+  list-style: none;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: var(--light);
+  border-radius: 0 0 8px 8px;
+}
+
+/* header nav ul{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+} */
+
+/* @media screen and (max-width: 1140px) {
+  #root{
+    width: 100%;
   }
+  header{
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  header nav ul{
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+
+ 
+  
+} */
+
+header nav ul{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+header button{
+  display: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media screen and (max-width: 1140px) {
+  #root{
+    width: 100%;
+  }
+  header{
+    padding: .5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+  header button{
+    display: block;
+  }
+  .navMenu-hidden{
+    display: none;
+  }
+  .navMenu-show{
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .navMenu-show li{
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px dashed var(--primary);
+    margin: 0 auto;
+  }
+  header nav ul{
+    gap: 0rem;
+  }
+  header nav ul li a{
+    width: 100%;
+    height: 50px;
+    vertical-align: middle;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-hidden{
+    background-color: var(--light);
+    width: 100%;
+    position: fixed;
+    top: 56px;
+    left: 0;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    transition: display 1s;
+  }
+
+ 
+  
+}
+
+main{
+  width: 100%;
+}
+main .hero-section{
+  background-color: var(--primary);
+  padding: 3rem;
+  width: 100%;
+  height: 23rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+main section .hero-description{
+  flex-basis: 40%;
+}
+main section .hero-description h1{
+  color: var(--secondary);
+  font-size: 64px;
+  font-family: 'Markazi Text', serif;
+  font-weight: 500;
+}
+main section .hero-description h3{
+  margin-top: -1rem;
+  color: var(--light);
+  font-size: 40px;
+  font-family: 'Markazi Text', serif;
+  font-weight: 400;
+}
+main section .hero-description p{
+  margin-top: 2rem;
+  color: var(--light);
+  font-size: 22px;
+  font-family: 'Karla', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+main section .hero-description button{
+  margin-top: 1rem;
+  font-family: 200px;
+  padding: 1rem;
+  font-size: 20px;
+  height: 50px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  border: none;
+  border-radius: 15px;
+  
+  background-color: var(--secondary);
+}
+main section .hero-image img{
+  width: 375px;
+  height: 430px;
+  border-radius: 28px;
+  object-fit: cover;
+}
+
+
+main .highlights-section{
+  margin-top: 8rem;
+  padding: 3rem;
+}
+main .highlights-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .highlights-top h1{
+  color: var(--dark);
+  font-family: 'Markazi Text', sans-serif;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+main .highlights-top button{
+  font-family: 200px;
+  padding: 1rem;
+  font-size: 20px;
+  width: 220px;
+  height: 50px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  border: none;
+  border-radius: 15px;
+  background-color: var(--secondary);
+}
+main .highlights-cards{
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+main .card{
+  border-radius: 8px;
+  background-color: var(--light);
+  flex-basis: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  box-shadow: 0px 3px 8px 6px rgb(0, 0, 0, 0.2);
+}
+main .card .card-title{
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+main .card .card-title h1{
+  float: left;
+  font-family: 'Karla', sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+}
+main .card .card-title h2{
+  color: var(--accent);
+  float: right;
+  font-family: 'Karla', sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+}
+main .card .card-description{
+  margin-top: 1rem;
+  padding: 2rem;
+  color: var(--primary);
+  font-family: 'Karla', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+}
+main .card .card-order{
+  width: 80%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+main .card .card-order a{
+  display: flex;
+  align-items: flex-start;
+  text-align: start;
+  font-family: 'Markazi text', serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+}
+main .card img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px 8px 0px 0px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (min-width:1330px){
+  main .card{
+    flex-basis: 30%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width:1330px){
+  main .highlights-cards{
+    margin-top: 4rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  main .card{
+    flex-basis: 40%;
+  }
+}
+
+@media screen and (max-width:1140px) {
+  main .highlights-cards{
+    margin-top: 4rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  main .card{
+    flex-basis: 30%;
+  }
+}
+
+@media screen and (max-width:1024px){
+  main .hero-section{
+    height: 22rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  main section .hero-description{
+    flex-basis: 50%;
+  }
+  main section .hero-description p{
+    margin-top: 1rem;
+  }
+  main section .hero-image img{
+    flex-basis: 30%;
+    width: 300px;
+    height: 350px;
+  }
+
+  main .highlights-section{
+    margin-top: 3rem;
+  }
+  main .highlights-cards{
+    margin-top: 4rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  main .card{
+    flex-basis: 40%;
+  }
+}
+
+@media screen and (max-width:768px){
+  main .hero-section{
+    padding: 2rem;
+    width: 100%;
+    height: auto !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  main section .hero-image img{
+    display: none;
+  }
+  main section .hero-description{
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  main section .hero-description button{
+    align-self: center;
+  }
+
+  main .highlights-section{
+    margin-top: 2rem;
+    padding: 2rem;
+  }
+  main .highlights-top{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+  main .highlights-top h1{
+    font-size: 50px;
+    margin: 0 auto;
+  }
+  main .highlights-top button{
+    margin: 0 auto;
+  }
+  main .highlights-cards{
+    margin-top: 4rem;
+    gap: 2rem;
+    justify-content: center;
+  }
+  main .card{
+    flex-basis: 60%;
+  }
+}
+@media screen and (max-width:510px){
+  main .card{
+    flex-basis: 85%;
+  }
+}
+
+
+footer{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--light);
+  padding: 2rem;
+  border-radius: 8px 8px 0 0;
+}
+
+@media screen and (max-width: 1140px) {
+  footer{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+  footer img{
+    width: 22%;
+  }
+  footer nav{
+    width: 20%;
+  }
+}
+@media screen and (max-width: 600px) {
+  footer{
+    display: flex;
+    justify-content: space-between;
+  }
+  footer img{
+    width: 30%;
+  }
+  footer nav{
+    flex-basis: 45%;
   }
 }

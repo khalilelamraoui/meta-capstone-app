@@ -5,7 +5,7 @@ export default function Footer(){
         <footer>
             <img src="https://xzhou.dev/images/little-lemon/footer_logo.png" alt="Little Lemon" />
             <nav>
-                <h4>Doormat Navigation</h4>
+                <h3>Doormat Navigation</h3>
                 <ul>
                     <li>
                         <a href="/home">Home</a>
@@ -28,7 +28,7 @@ export default function Footer(){
                 </ul>
             </nav>
             <nav>
-                <h4>Contact</h4>
+                <h3>Contact</h3>
                 <ul>
                     <li>
                         <a href="/home">Adress</a>
@@ -42,7 +42,7 @@ export default function Footer(){
                 </ul>
             </nav>
             <nav>
-                <h4>Social Media Links</h4>
+                <h3>Social Media Links</h3>
                 <ul>
                     <li>
                         <a href="/home">Adress</a>

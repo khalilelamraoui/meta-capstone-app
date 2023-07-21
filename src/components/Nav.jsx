@@ -1,7 +1,9 @@
+
 export default function Nav(){
     return(
-        <nav>
-            <ul>
+        
+        <nav className="nav-hidden">
+            <ul className='navMenu-hidden' id='MenuState'>
                 <li>
                     <a href="/home">Home</a>
                 </li>
