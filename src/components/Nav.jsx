@@ -1,3 +1,5 @@
+// import { HashLink as LinkDiv } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 
 export default function Nav(){
     return(
@@ -5,24 +7,25 @@ export default function Nav(){
         <nav className="nav-hidden">
             <ul className='navMenu-hidden' id='MenuState'>
                 <li>
-                    <a href="/home">Home</a>
+                    <Link to="/">Home</Link >
                 </li>
                 <li>
-                    <a href="/home">About</a>
+                    <Link to="/about">About</Link >
                 </li>
                 <li>
-                    <a href="/home">Menu</a>
+                    <Link to="/menu">Menu</Link >
                 </li>
                 <li>
-                    <a href="/home">Reservations</a>
+                    <Link to="/booking-a-table">Reservations</Link >
                 </li>
                 <li>
-                    <a href="/home">Order Online</a>
+                    <Link to="/order">Order Online</Link >
                 </li>
                 <li>
-                    <a href="/home">Login</a>
+                    <Link to="/login">Login</Link >
                 </li>
             </ul>
         </nav>
     )
 }
+//I want to scroll to about div in the Main component
